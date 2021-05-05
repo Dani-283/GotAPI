@@ -38,16 +38,9 @@ export class Home extends Component {
 
     let value = event.target.value.toUpperCase();
     let result = [];
-
-    // let test = books.filter(
-    //   (book) => !JSON.stringify(bookmarkedBooks).includes(JSON.stringify(book))
-    // );
     result = books.filter((data) => {
-      // console.log(data.name.toUpperCase().search(value))
       return data.name.toUpperCase().search(value) !== -1 && value !== "";
     });
-    // result.forEach((res) => console.log(res.bookmarked));
-    // console.log(result);
 
     this.setState({
       filteredBooks: result,
@@ -66,11 +59,10 @@ export class Home extends Component {
           <input
             onChange={(event) => this.handleSearch(event)}
             type="text"
-            placeholder="search your favorite books"
+            placeholder="search game of thrones books"
           ></input>
         </div>
 
-        {/* Use JSX below for each book */}
         {books.forEach((book, index) => {
           book.num = index;
         })}
@@ -81,7 +73,6 @@ export class Home extends Component {
               book={book}
               key={index}
               bookmarkedBooks={bookmarkedBooks}
-              // handleBookmPerPage={this.handleBookmPerPage}
               num={book.num}
               handleBookmark={handleBookmark}
             />

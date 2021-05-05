@@ -16,6 +16,8 @@ export class Navbar extends Component {
   };
 
   render() {
+    let home = this.props.homeClicked ? "nav-clicked" : "nav";
+    let bookmarked = this.props.bookmarkedClicked ? "nav-clicked" : "nav";
     return (
       <div className="navbar-container">
         <div className="navbar">
@@ -24,10 +26,22 @@ export class Navbar extends Component {
           </h1>
           <ul className="navlinks">
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink
+                onClick={this.props.handleNavHome}
+                className={home}
+                to="/"
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/bookmarked">Bookmarked</NavLink>
+              <NavLink
+                onClick={this.props.handleNavBookmarked}
+                className={bookmarked}
+                to="/bookmarked"
+              >
+                Bookmarked
+              </NavLink>
             </li>
           </ul>
           <Burger open={this.state.open} setOpen={this.setOpen} />

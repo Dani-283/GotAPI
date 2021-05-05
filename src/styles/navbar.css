@@ -31,12 +31,23 @@
     padding-left: 0.5rem;
 }
 
-.navlinks a{
+.nav{
     text-decoration: none;
     height:2rem;
     font-size: 1.1em;
-    padding:15px
+    padding:15px;
+    color:black
 }
+.nav-clicked{
+    text-decoration: none;
+    height:2rem;
+    font-size: 1.1em;
+    padding:15px;
+    color:#fcc42f;
+   
+}
+
+
 
 a:hover{
     color:#fcc42f;

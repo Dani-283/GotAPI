@@ -29,14 +29,15 @@
     }
     
     .book h2 {
-      margin-top: 5px;
+      margin-top: 1px;
       margin-bottom: 30px;
       font-size: 1.4rem;
     }
   
     .book button{
       background: none;
-      border: none;  }
+      border: none;  
+    padding:10px}
   
     .book button:hover{
       background-color: rgba(124, 209, 209, 0.863);
@@ -52,7 +53,6 @@
     .fa-crown{
       font-size: x-large;
       color: whitesmoke;
-      padding-top:7px
     }
   
     .clicked{

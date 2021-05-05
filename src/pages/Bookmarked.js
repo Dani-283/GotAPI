@@ -22,7 +22,6 @@ export class Bookmarked extends Component {
       <div className="content">
         <h1>Books you bookmarked</h1>
 
-        {/* Use JSX below for each book */}
         {books.forEach((book, index) => {
           book.num = index;
         })}
@@ -34,7 +33,6 @@ export class Bookmarked extends Component {
               key={index}
               num={book.num}
               handleBookmark={handleBookmark}
-              // handleBookmPerPage={this.handleBookmPerPage}
               bookmarkedBooks={bookmarkedBooks}
             />
           ))}
