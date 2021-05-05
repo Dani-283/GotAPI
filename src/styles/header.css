@@ -22,3 +22,9 @@
 .header-div a:hover {
     color:#fcc42f
 }
+
+@media only screen and (max-width:590px){
+    .header-div{
+        justify-content: center;
+    }
+}

@@ -10,14 +10,24 @@ export class Menu extends Component {
     let navlinks_class = this.props.open
       ? "menu-navlinks"
       : "menu-navlinks-hidden";
+    let home = this.props.homeClicked ? "nav-clicked" : "nav";
+    let bookmarked = this.props.bookmarkedClicked ? "nav-clicked" : "nav";
     return (
       <div className={menu_class}>
         <ul className={navlinks_class}>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink onClick={this.props.handleNavHome} className={home} to="/">
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/bookmarked">Bookmarked</NavLink>
+            <NavLink
+              onClick={this.props.handleNavBookmarked}
+              className={bookmarked}
+              to="/bookmarked"
+            >
+              Bookmarked
+            </NavLink>
           </li>
         </ul>
       </div>

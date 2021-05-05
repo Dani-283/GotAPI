@@ -62,5 +62,14 @@ a:hover{
     }
     .title{
         font-size: larger;
+        
+    }
+
+    
+}
+
+@media only screen and (max-width:650px){
+    .navlinks{
+        margin-right: 13px;
     }
 }

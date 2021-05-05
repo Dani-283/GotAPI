@@ -46,7 +46,14 @@ export class Navbar extends Component {
           </ul>
           <Burger open={this.state.open} setOpen={this.setOpen} />
         </div>
-        <Menu open={this.state.open} setOpen={this.setOpen} />
+        <Menu
+          handleNavBookmarked={this.props.handleNavBookmarked}
+          handleNavHome={this.props.handleNavHome}
+          homeClicked={this.props.homeClicked}
+          bookmarkedClicked={this.props.bookmarkedClicked}
+          open={this.state.open}
+          setOpen={this.setOpen}
+        />
       </div>
     );
   }

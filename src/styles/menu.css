@@ -47,11 +47,11 @@ flexbox komentar
     }
 }
 
-.menu-navlinks a,.menu-navlinks-hidden a{
+/* .menu-navlinks a,.menu-navlinks-hidden a{
     color:black;
     text-shadow: none;
     font-weight: 700;
-}
+} */
 
 .menu-navlinks li{
     padding:0.6rem 0 0.2rem 0;
