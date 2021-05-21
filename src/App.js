@@ -16,16 +16,15 @@ export class App extends Component {
       bookmarkedBooks: [],
     };
   }
+
   handleBookmark = (book, bookmarked) => {
     const { bookmarkedBooks } = this.state;
-    console.log("prp");
     if (bookmarked) {
       let array = [...bookmarkedBooks, book];
       this.setState({ bookmarkedBooks: array });
     } else {
       let array = bookmarkedBooks.filter((data) => book.name !== data.name);
       this.setState({ bookmarkedBooks: array });
-      console.log(array);
     }
   };
   render() {

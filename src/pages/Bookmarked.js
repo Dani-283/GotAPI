@@ -15,31 +15,24 @@ export class Bookmarked extends Component {
     this.setState({ books: this.props.bookmarkedBooks });
   }
   render() {
-    // let array = [];
-    const { books } = this.state;
     const { bookmarkedBooks, handleBookmark } = this.props;
     return (
       <div className="content">
         <h1>Books you bookmarked</h1>
-
-        {books.forEach((book, index) => {
-          book.num = index;
-        })}
 
         <div className="books">
           {bookmarkedBooks.map((book, index) => (
             <Card
               book={book}
               key={index}
-              num={book.num}
               handleBookmark={handleBookmark}
               bookmarkedBooks={bookmarkedBooks}
             />
           ))}
-          {!bookmarkedBooks.length && (
-            <p style={{ margin: "auto" }}>No bookmarked books :(</p>
-          )}
         </div>
+        {!bookmarkedBooks.length && (
+          <p style={{ margin: "auto" }}>No bookmarked books :(</p>
+        )}
       </div>
     );
   }
